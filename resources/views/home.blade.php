@@ -1,7 +1,5 @@
-@extends('master')
+@extends('layouts.master')
+@section('header-title', 'Home')
 @section('main')
-    @include('partials.slide')
-    @include('partials.category')
-    @include('partials.hot_product')
-    @include('partials.gallery')
+
 @endsection

@@ -1,15 +1,18 @@
-@extends('master')
+@extends('layouts.master')
+
+@section('header-title', 'Login')
 
 @section('main')
     <!-- slider Area Start-->
     <div class="slider-area ">
         <!-- Mobile Menu -->
-        <div class="single-slider slider-height2 d-flex align-items-center" data-background= {{ asset("/img/hero/category.jpg") }} >
+        <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/category.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap text-center">
-                            <h2>Login</h2>
+                            <h3>Welcome back! <br> <br>
+                            Please login now</h3>
                         </div>
                     </div>
                 </div>
@@ -17,7 +20,6 @@
         </div>
     </div>
     <!-- slider Area End-->
-
     <!--================login_part Area =================-->
     <section class="login_part section_padding ">
         <div class="container">
@@ -25,10 +27,9 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="login_part_text text-center">
                         <div class="login_part_text_iner">
-                            <h2>New to our Shop?</h2>
-                            <p>There are advances being made in science and technology
-                                everyday, and a good example of this is the</p>
-                            <a href="#" class="btn_3">Create an Account</a>
+                            <h2>No account ?</h2>
+                            <p>Please create an account to buy our latest products</p>
+                            <a href="{{ route('register') }}" class="btn_3">Create an Account</a>
                         </div>
                     </div>
                 </div>
