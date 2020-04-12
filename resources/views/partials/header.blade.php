@@ -40,8 +40,20 @@
                                             <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
+                                @guest 
                                    <li class="d-none d-lg-block"> <a href="{{ route('register') }}" class="btn header-btn">Register</a></li>
                                    <li class="d-none d-lg-block"> <a href="{{ route('login') }}" class="btn header-btn">Sign in</a></li>
+                                @else
+                                    <li class="nav-item dropdown">
+                                        <a href="#" id="navbarDropdown" class="btn header-btn nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->full_name }}</a>
+
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            <a id="logout" class="dropdown-item" href="{{ route('logout') }}">
+                                               log out
+                                            </a>
+                                        </div>
+                                    </li>
+                                @endguest
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->
